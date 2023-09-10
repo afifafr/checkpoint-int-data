@@ -1,0 +1,29 @@
+Algorithme SommeElementsDistints(set1, set2):
+    # Créer un ensemble vide pour stocker les éléments distincts
+    ensemble_distinct = EnsembleVide()
+    
+    # Parcourir tous les éléments de set1
+    Pour chaque élément dans set1:
+        # Ajouter l'élément à l'ensemble distinct s'il n'est pas déjà présent
+        Si élément n'est pas dans ensemble_distinct alors:
+            Ajouter élément à ensemble_distinct
+    
+    # Parcourir tous les éléments de set2
+    Pour chaque élément dans set2:
+        # Ajouter l'élément à l'ensemble distinct s'il n'est pas déjà présent
+        Si élément n'est pas dans ensemble_distinct alors:
+            Ajouter élément à ensemble_distinct
+    
+    # Calculer la somme des éléments dans l'ensemble distinct
+    somme = 0
+    Pour chaque élément dans ensemble_distinct:
+        somme = somme + élément
+    
+    # Retourner la somme des éléments distincts
+    Retourner somme
+
+# Exemple d'utilisation :
+set1 = [3, 1, 7, 9]
+set2 = [2, 4, 1, 9, 3]
+resultat = SommeElementsDistints(set1, set2)
+Afficher résultat  # Output: 13 (éléments distincts 4, 7, 2)

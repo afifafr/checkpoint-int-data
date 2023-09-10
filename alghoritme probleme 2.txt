@@ -1,0 +1,65 @@
+Using a Procedure (Procedure):
+
+Procedure dot_product(v1, v2, ps)
+    # Initialize the dot product to zero
+    ps ← 0
+    
+    # Calculate the dot product
+    For each i from 1 to the length of v1 (or v2, as they have the same length)
+        ps ← ps + (v1[i] * v2[i])
+    End For
+End Procedure
+
+Algorithm DetermineOrthogonality(vectors, n)
+    For each pair of vectors (v1, v2) in vectors
+        # Call the dot_product procedure to calculate the dot product
+        dot_product(v1, v2, ps)
+        
+        # Check if the dot product is equal to zero
+        If ps = 0 then
+            Print "Vectors v1 and v2 are orthogonal."
+        Else
+            Print "Vectors v1 and v2 are not orthogonal."
+        End If
+    End For
+End Algorithm
+
+# Example Usage:
+vectors = [([1, 0], [0, -1]), ([1, 1], [1, -1]), ([2, 3], [3, -2])]
+DetermineOrthogonality(vectors, 3)
+
+
+Using a Function (Function):
+plaintext
+Copy code
+Function dot_product(v1, v2)
+    # Initialize the dot product to zero
+    ps ← 0
+    
+    # Calculate the dot product
+    For each i from 1 to the length of v1 (or v2, as they have the same length)
+        ps ← ps + (v1[i] * v2[i])
+    End For
+    
+    # Return the dot product
+    Return ps
+End Function
+
+Algorithm DetermineOrthogonality(vectors, n)
+
+    For each pair of vectors (v1, v2) in vectors
+        # Call the dot_product function to calculate the dot product
+        ps ← dot_product(v1, v2)
+        
+        # Check if the dot product is equal to zero
+        If ps = 0 then
+            Print "Vectors v1 and v2 are orthogonal."
+        Else
+            Print "Vectors v1 and v2 are not orthogonal."
+        End If
+    End For
+End Algorithm
+
+# Example Usage:
+vectors = [([1, 0], [0, -1]), ([1, 1], [1, -1]), ([2, 3], [3, -2])]
+DetermineOrthogonality(vectors, 3)
